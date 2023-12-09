@@ -1,0 +1,86 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>start1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
+</head>
+
+
+
+<body>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th>Цвет</th>
+        <th>Класс</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Default</td>
+        <td>Default</td>
+      </tr>
+      <tr class="table-primary">
+        <td>Primary</td>
+        <td>class="table-primary"</td>
+      </tr>
+      <tr class="table-success">
+        <td>Success</td>
+        <td>class="table-success"</td>
+      </tr>
+      <tr class="table-danger">
+        <td>Danger</td>
+        <td>class="table-danger"</td>
+      </tr>
+      <tr class="table-info">
+        <td>Info</td>
+        <td>class="table-info"</td>
+      </tr>
+      <tr class="table-warning">
+        <td>Warning</td>
+        <td>class="table-warning"</td>
+      </tr>
+      <tr class="table-active">
+        <td>Active</td>
+        <td>class="table-active" </td>
+      </tr>
+      <tr class="table-secondary">
+        <td>Secondary</td>
+        <td>class="table-secondary</td>
+      </tr>
+      <tr class="table-light">
+        <td>Light</td>
+        <td>class="table-light"</td>
+      </tr>
+      <tr class="table-dark">
+        <td>Dark</td>
+        <td>class="table-dark"</td>
+      </tr>
+    </tbody>
+</table>
+<!--
+Использование контекстных классов для окрашивания всей таблицы(<table>), строк таблицы(<tr>) или ячеек таблицы(<td>):
+class="table-primary" - синий, указывает на важное действие
+class="table-success" - зеленый, указывает на успешное или положительное действие
+class="table-danger" - красный, указывает на опасное или потенциально негативное действие
+class="table-info" - голубой, указывает на нейтральное информативное изменение или действие
+class="table-warning" - оранжевый, указывает на предупреждение
+class="table-active" - серый, применяется на наведение курсора мыши на строку или ячейку таблицы
+class="table-secondary" - серый, указывает на менее важное действие
+class="table-light" - светло-серый фон таблицы или строки таблицы
+class="table-dark" - черный фон таблицы или строки таблицы
+! -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'layout:home' %}" class="btn btn-primary my-2">В начало</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

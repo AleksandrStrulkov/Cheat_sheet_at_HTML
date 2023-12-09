@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>start1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
+</head>
+
+
+<body>
+<div class="container">
+    <div class="row bg-success text-white">Первая строка</div>
+    <div class="row my-2"><!-- Задание вертикального отступа между строк my-2! -->
+        <div class="col mx-2 bg-primary text-white">Блок 1</div><!-- Задание горизонтального отступа между колонок mx-2!-->
+        <div class="col mx-2 bg-primary text-white">Блок 2</div><!-- Задание горизонтального отступа между колонок mx-2! -->
+        <div class="col mx-2 bg-primary text-white">Блок 3</div><!-- Задание горизонтального отступа между колонок mx-2! -->
+    </div>
+</div>
+<!--
+Задание отступов элементам макета HTML
+Синтаксис:  {property}{sides}:{size}
+            {m или p}{t, b, s, e, x, y, blank} :{0,1,2,3,4,5, auto}
+1. m - отступы за пределами элемента
+   p - отступы внутри элемента
+2. t - отступ в верхней части элемента
+   b - в нижней части
+   s - в стартовой части элемента
+   e - в конечной части элемента
+   x - с двух сторон по горизонтали
+   y - с двух сторон по вертикали
+   blank - со всех четырех сторон
+3. 0 - нет отступов
+   1 - отступ, равный $spacer * .25;
+   2 - отступ, равный $spacer * .5;
+   3 - отступ, равный $spacer; ($spacer=1rem=16px)
+   4 - отступ, равный $spacer * 1.5;
+   5 - отступ, равный $spacer * 3;
+   auto - авто
+! -->
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'layout:home' %}" class="btn btn-primary my-2">В начало</a>
+        </div>
+    </div>
+</div>
+</body>
+
+

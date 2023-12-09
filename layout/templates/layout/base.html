@@ -1,0 +1,90 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>layout</title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <meta name="theme-color" content="#7952b3">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-7 py-4">
+                    <h4 class="text-white">layout</h4>
+                </div>
+                <div class="col-sm-4 offset-md-1 py-4">
+                    <h4 class="text-white">Меню</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="{% url 'layout:home' %}" class="text-white">Главная</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor"
+                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2"
+                     viewBox="0 0 24 24">
+                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                    <circle cx="12" cy="13" r="4"/>
+                </svg>
+                <strong>Album</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader"
+                    aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="py-5 text-center container">
+        <div class="row py-lg-5">
+            <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">{{ title }}</h1>
+                <a href="{% url 'layout:start1' %}" class="btn btn-primary my-2">1_start1</a>
+                <a href="{% url 'layout:color_bg' %}" class="btn btn-primary my-2">2_color_bg</a>
+                <a href="{% url 'layout:color_text' %}" class="btn btn-primary my-2">3_color_text</a>
+                <a href="{% url 'layout:color_text_bg' %}" class="btn btn-primary my-2">4_color_text_bg</a>
+                <a href="{% url 'layout:space_1' %}" class="btn btn-primary my-2">5_space_1</a>
+                <a href="{% url 'layout:space_2' %}" class="btn btn-primary my-2">6_space_2</a>
+                <a href="{% url 'layout:space_3' %}" class="btn btn-primary my-2">7_space_3</a>
+                <a href="{% url 'layout:aligment_1' %}" class="btn btn-primary my-2">8_aligment_1</a>
+                <a href="{% url 'layout:aligment_2' %}" class="btn btn-primary my-2">9_aligment_2</a>
+                <a href="{% url 'layout:border_1' %}" class="btn btn-primary my-2">10_border_1</a>
+                <a href="{% url 'layout:border_2' %}" class="btn btn-primary my-2">11_border_2</a>
+                <a href="{% url 'layout:border_color' %}" class="btn btn-primary my-2">12_border_color</a>
+                <a href="{% url 'layout:border_radius' %}" class="btn btn-primary my-2">13_border_radius</a>
+                <a href="{% url 'layout:border_radius_1' %}" class="btn btn-primary my-2">14_border_radius_1</a>
+                <a href="{% url 'layout:start' %}" class="btn btn-primary my-2">15_start</a>
+                <a href="{% url 'layout:start_1' %}" class="btn btn-primary my-2">16_start_1</a>
+                <a href="{% url 'layout:table' %}" class="btn btn-primary my-2">17_table</a>
+                <a href="{% url 'layout:table_1' %}" class="btn btn-primary my-2">18_table_1</a>
+            </div>
+        </div>
+    </section>
+</main>
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>

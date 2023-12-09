@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>start1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
+</head>
+
+
+<body>
+<!--
+В этом примере несколько адаптивных контейнеров класса container. В первом находится текст, во втором
+- создан один ряд, в котором имеются три адаптивных блока с вложенным в них текстом.
+При изменении ширины окна браузера меняется ширина контейнеров (слева и справа остается свободное пространство).
+При минимальной ширине окна браузера колонки трансформируются в три строки, и боковые отступы исчезают,
+при этом размер шрифта не уменьшается.
+В таком виде страница будет отчетливо отображаться как на экране компьютера, так и на экране смартфона,
+текст будет оставаться разборчивым и читаемым.
+! -->
+<div class="container p-3 bg-primary text-white text-center">
+    <h1>Это страница Bootstrap</h1>
+    <p>Измените размер этой адаптивной страницы, чтобы увидеть эффект!</p>
+</div>
+
+<div class="container mt-3 text-center border border-3">
+    <div class="row">
+        <div class="col-sm-4 ">
+            <h3>Колонка 1</h3>
+            <p>Это содержимое</p>
+            <p>первой колонки</p>
+        </div>
+        <div class="col-sm-4 ">
+            <h3>Колонка 2</h3>
+            <p>Это содержимое</p>
+            <p>второй колонки</p>
+        </div>
+        <div class="col-sm-4 ">
+            <h3>Колонка 3</h3>
+            <p>Это содержимое</p>
+            <p>третьей колонки</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'layout:home' %}" class="btn btn-primary my-2">В начало</a>
+        </div>
+    </div>
+</div>
+
+</body>
+

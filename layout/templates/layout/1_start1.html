@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>start1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %} ">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Это страница Bootstrap</h1>
+            <p>На странице создан контейнер фиксированной ширины
+                class="container".</p>
+            <p>В контейнер вложена одна строка class="row."</p>
+            <p>В строке находится один адаптивный блок class="col".</p>
+            <p>С изменением размера окна браузера ширина элементов контейнера
+                будет меняться в разных контрольных точках.</p>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'layout:home' %}" class="btn btn-primary my-2">В начало</a>
+        </div>
+    </div>
+</div>
+
+<!--
+Адаптивный макет и контрольные точки:
+xs: - 0
+sm: - 576 рх
+md: - 768 px
+lg: - 992 px
+xl: - 1200 px
+xxl: - 1400 px
+
+Сетка состоит из последовательных элементов:
+1. Оберточные контейнеры:
+    class="container" - адаптивно фиксированный контейнер устанавливает
+    максимальную ширину для каждой контрольной точки.
+    class="container-fluid" - адаптивно подвижной (резиновый) контейнер
+    устанавливает максимальную ширину во всех контрольных точках.
+2. Ряды или строки:
+    class="row"
+3. Адаптивные колонки или блоки, имеющие один или несколько классов:
+    class="col" по умолчанию точка xs и ширина 12
+    class="col-?-?" 1)? - контрольная точка(пусто, sm, md, lg, xl, xxl), 2)? - ширина блока(1-12)
+! -->
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+
