@@ -21,16 +21,6 @@
         </div>
     </div>
 </div>
-
-
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <a href="{% url 'layout:home' %}" class="btn btn-primary my-2">В начало</a>
-        </div>
-    </div>
-</div>
-
 <!--
 Адаптивный макет и контрольные точки:
 xs: - 0
@@ -53,6 +43,13 @@ xxl: - 1400 px
     class="col-?-?" 1)? - контрольная точка(пусто, sm, md, lg, xl, xxl), 2)? - ширина блока(1-12)
 ! -->
 
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <a href="{% url 'layout:home' %}" class="btn btn-primary my-2">В начало</a>
+        </div>
+    </div>
+</div>
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 </body>
 </html>
